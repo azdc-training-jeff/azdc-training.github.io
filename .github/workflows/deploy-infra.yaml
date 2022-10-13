@@ -64,4 +64,5 @@ jobs:
         with:
           # We reference the webAppName output of the deploy-infra job
           app-name: ${{ needs.deploy-infra.outputs.webAppName }}
+          ResourceGroupName: ${{ env.RESOURCE_GROUP_NAME }}
           startup-command: npm start
